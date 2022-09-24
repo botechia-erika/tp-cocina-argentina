@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<meta charset="UTF-8">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+          <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+          <link rel="stylesheet" href="assets/css/clases.css">      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
+        <title>TP #01 POSTRES ARGENTINOS</title>
+	</head>
+<body>
+    
+    <aside class="aside-container">
+        <nav>
+            <a class="item item-1">A</a>
+            <a class="item item-2">B</a>
+            <a class="item item-3">C</a>
+            <a class="item item-4">D</a>
+            <a class="item item-5">D</a>
+        </nav>
+    </aside>
+
+    <header>
+        <h1> HTML SEMANTICO</h1>
+    </header>
+
+<main>
+  <div class="container">
+    <main>
+
+      <form action="" method="GET">
+        <label for="primerNombre_Usuario">Nombre de Pila: </label>
+        <input type="text" for="realUser" id="primerNombre_Usuario" placeholder="Pepe Suarez">
+        <!-- FOR = ES PARA -- label es para este input -->
+
+        <label for="apellido_Usuario">Apellido </label>
+        <input type="text" name="apellido_Usuario" id="apellido_Usuario">
+
+        <!-- NUMBER -->
+
+        <label for="edadUsuario"> Ingrese su EDAD</label>
+        <input type="number" name="edadUser" id="edadUser" min="18" max="120" maxlength="3" value="18">
+
+
+        <!-- EMAIL -->
+        <p>
+          <label for="emailUser">E-mail</label>
+          <input type="email" name="emailUser" id="emailUser" minlength="9" maxlength="250" pattern=".+@.+\.com">
+
+
+        </p>
+        <!-- fecha -->
+
+        <label class="dateBirth">Fecha Cumple </label>
+        <input type="date" name="dateBirth" id="dateBirth">
+
+
+        <!-- PASSWORD -->
+        <p>
+          <label for="passwordUser">Contrasena</label>
+          <input type="password" name="passwordUser"
+            pattern="[(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$]" id="passwordUser"
+            minlength="5" maxlength="8" size="8" required="">
+        </p>
+        <!-- size = tamano visual minlenght=numero minimo de caracteres maxlenght = numero maximo caracteres -->
+        <!-- pattern usa expresiones regulares tipo de conjunto de caracteres que acepta -->
+
+        <!-- file -->
+        <!-- <label>Archivo
+        <input type="file" name="fileUser" id="fileUser">
+        </label> -->
+        <label>COLOR PICKER
+          <input type="color" name="colorForUser" id="colorForUser">
+
+        </label>
+
+        <fieldset>
+          <legend>CHECK SELECT</legend>
+          <label for="opt1">
+
+            <input type="checkbox" name="opt1" value="check01"> CHECK #01
+          </label>
+          <label for="opt1">
+            <input type="checkbox" name="opt1" value="check02"> CHECK #02
+          </label>
+          <label for="opt1">
+            <input type="checkbox" name="opt1" value="check03"> CHECK #03
+
+          </label>
+
+        </fieldset>
+
+        <fieldset>
+          <legend>CHECK OPTIONS</legend>
+          <label for="opt1">
+            <input type="checkbox" name="opt1" value="check01"> CHECK #01
+          </label>
+          <label for="opt1">
+            <input type="checkbox" name="opt1" value="check02"> CHECK #02
+          </label>
+          <label for="opt1">
+            <input type="checkbox" name="opt1" value="check03"> CHECK #03
+          </label>
+        </fieldset>
+        <button type="submit">Enviar datos</button>
+
+      </form>
+
+    </main>
+  </div>
+
+
+</main>
+
+
+
+   
+  <footer>
+    <ul class="social-icons-list">
+      <li>
+          <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+      </li>
+      <li>
+          <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+      </li>
+      <li>
+          <a href="#" class="social-link"><i class="fab fa-google-plus-g"></i></a>
+      </li>
+      <li>
+          <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+      </li>
+  </ul>
+  </footer>
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<meta charset="UTF-8">
+        <title>TP #01 POSTRES ARGENTINOS</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+<style>
+    *{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html{
+  font-size: 16px;
+}
+
+body{
+  display: flex;
+  flex-flow: column wrap;
+  background-color: antiquewhite;
+  min-height: 100vh;
+  font-family: 'Roboto', sans-serif;
+
+}
+
+nav{
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+
+
+.container{
+  display: block;
+width: 90%;
+padding: 2rem;
+justify-content: center;
+align-items: center;
+align-self: center;
+}
+
+header{
+  padding: 2rem;
+  border-radius: 15px ;
+  -webkit-border-radius: 15px ;
+  -moz-border-radius: 15px ;
+  -ms-border-radius: 15px ;
+  -o-border-radius: 15px ;
+}
+.header__h1{
+  color: rgb(0, 17, 255);
+  font-size:3rem;
+  text-align: center;
+  font-weight: 900;
+  background-color: white;
+}
+
+.header__p{
+  font-size: 22px;
+  color: rgb(255, 255, 255);
+  background-color: black;
+  text-align: center;
+  font-weight: 900;
+}
+.header__h2{
+  font-size: 1.6rem;
+  text-align: center;
+  padding: 2rem;
+  margin: auto;
+  background-color: rgb(93, 158, 255);
+  color: aliceblue;
+  font-weight: 900;
+}
+
+.titleSection{
+  display: inline-block;
+  width: 100%;
+  height: 10vh;
+  background-image: url("./../images/bg/bg-02.png");
+  background-size: calc(100%);
+
+}
+.ctncard{
+  display: flex;
+  flex-flow:  row wrap ;
+  width: 100%;  background-color: azure;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+  align-self: center;
+  justify-content: space-around;
+  align-items: center;
+
+}
+
+
+.boxDobleArticle{ 
+  display: flex;
+  width: 390px;
+  height: 370px;
+  background-color: rgb(169, 185, 255);
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  box-shadow: rgb(87, 87, 87) 2px 2px 2px 0px;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  padding-top: 0px;
+  transition-delay: 0.20s;
+  transition-duration: 0.3s;
+  transition-property: all;
+  align-items: center;
+  justify-content: center;
+align-self: center;
+gap: 3;
+margin: 2rem;
+margin-left: 0;
+margin-right: 0;
+}
+.text-right{
+  text-align: right;
+}
+
+
+.banner__img{
+  max-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+}
+
+.table, .tableSchedule{
+  width: 100%;
+  align-self: center;
+  padding: 2rem;
+}
+
+
+ul , li {
+  list-style-position: inside;
+  padding: 1rem;
+}
+
+.postreName{
+  text-align: center;
+  vertical-align: middle;
+  margin: auto;
+}
+.text-center{
+  text-align: center;
+}
+
+
+.htable {
+  
+  text-align: center;
+    display:  inline;
+    font-size: 2rem;
+    background: #5900ff;
+    width: 300px;
+    color: #ffffff;
+    box-shadow: .5em 0 0 #071b7ef0, -.5em 0 0 #071b7ef0;
+    line-height: 3.3rem;
+    align-self: center;
+    align-items: center;
+  }
+  .imgPostre{
+ width: 100%;
+ min-height: 345px;
+ object-fit: cover;
+ align-self: center;
+ border-radius:15px ;
+ -webkit-border-radius:15px ;
+ -moz-border-radius:15px ;
+ -ms-border-radius:15px ;
+ -o-border-radius:15px ;
+}
+
+
+.gallery__title{
+  margin-top: 50px;
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+.gallery__title::after{
+  content: "";
+  display: block;
+  height: 4px;
+  background: crimson;
+  width: 200px;
+  margin-top: 20px;
+}
+
+.gallery__grid{
+  padding: 50px 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 10px;
+  grid-auto-rows: 350px;
+}
+
+.gallery__img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+</style>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet"  href="assets/css/clases.css">
+    </head>
+	<body>
+            <nav>
+                <a class="item item-1">A</a>
+                <a class="item item-2">B</a>
+                <a class="item item-3">C</a>
+                <a class="item item-4">D</a>
+                <a class="item item-5">D</a>
+            </nav>
+        </aside>
+        
+        <header>
+            <h1> HTML SEMANTICO</h1>
+        </header>
+    
+<main>
+    <div class="cardCtn">
+        <div class="boxCandyCard">
+
+      <figure class="card-index">
+        <img src="assets/img/postres/postre1_cheescake.jpg" alt="cheescake" class="imgPostre" ;/>
+      </figure>
+
+    </div>
+
+<div class="boxCandyCard">
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <td class="text-center htable">CHEESCAKE</td>
+           
+        </tr>
+    </thead>
+
+        <tbody>
+            <tr>
+                <td class="postreImg">Postre #01</td>
+                <td class="text-center"><strong>Cheescake</strong></td>
+                <td class="text-center">Ficha Tecnica</td>
+            </tr>
+            <tr>
+          
+                <td>
+                    <ul>
+                        <li>Origen: </li>
+                        <li>Tecnicas Fundamentales:</li>
+                        <li>Ingrediente Caracteristico:</li>
+                        <li>Variantes</li>
+                    </ul>
+                </td>
+            </tr>
+            </tbody>
+            </table>
+</div>
+<div class="boxCandyCard"><table class="tableSchedule">
+    <thead>
+    <tr>
+        <th class="text-center">Recepta</th>
+        <th class="text-center"> Recepta</th>
+    </tr>
+</thead>
+
+</table>
+</div>
+</div>
+
+
+
+
+    <div class="boxDobleArticle">
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <td class="text-center htable">CHEESCAKE</td>
+                   
+                </tr>
+            </thead>
+        
+                <tbody>
+                    <tr>
+                        <td class="postreImg">Postre #01</td>
+                        <td class="text-center"><strong>Cheescake</strong></td>
+                        <td class="text-center">Ficha Tecnica</td>
+                    </tr>
+                    <tr>
+                  
+                        <td>
+                            <ul>
+                                <li>Origen: </li>
+                                <li>Tecnicas Fundamentales:</li>
+                                <li>Ingrediente Caracteristico:</li>
+                                <li>Variantes</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    </tbody>
+                    </table>
+        </div>
+       
+        </div>
+        
+        </div>
+        <div class="container">
+            <h2 class="header__h2">
+                POSTRES ARGENTINOS
+             </h2>	
+             </div>
+<div class="ctncard">
+
+
+    <div class="boxDobleArticle">
+
+
+      <figure class="card-index">
+        <img src="assets/img/postres/postre1_cheescake.jpg" alt="cheescake" class="imgPostre" ;/>
+      </figure>
+
+    </div>
+
+<div class="boxDobleArticle">
+
+<table class="table">
+    <thead>
+        <tr>
+            <td class="text-center htable">CHEESCAKE</td>
+           
+        </tr>
+    </thead>
+
+        <tbody>
+            <tr>
+                <td class="postreImg">Postre #01</td>
+                <td class="text-center"><strong>Cheescake</strong></td>
+                <td class="text-center">Ficha Tecnica</td>
+            </tr>
+            <tr>
+          
+                <td>
+                    <ul>
+                        <li>Origen: </li>
+                        <li>Tecnicas Fundamentales:</li>
+                        <li>Ingrediente Caracteristico:</li>
+                        <li>Variantes</li>
+                    </ul>
+                </td>
+            </tr>
+            </tbody>
+            </table>
+</div>
+<div class="boxDobleArticle">
+<table class="tableSchedule">
+    <thead>
+    <tr>
+        <th class="text-center">Recepta</th>
+        <th class="text-center"> Recepta</th>
+    </tr>
+</thead>
+
+</table>
+</div>
+
+
+
+
+    <div class="boxDobleArticle">
+
+  
+        <table class="table">
+            <thead>
+                <tr>
+                    <td class="text-center htable">CHEESCAKE</td>
+                   
+                </tr>
+            </thead>
+        
+                <tbody>
+                    <tr>
+                        <td class="postreImg">Postre #01</td>
+                        <td class="text-center"><strong>Cheescake</strong></td>
+                        <td class="text-center">Ficha Tecnica</td>
+                    </tr>
+                    <tr>
+                  
+                        <td>
+                            <ul>
+                                <li>Origen: </li>
+                                <li>Tecnicas Fundamentales:</li>
+                                <li>Ingrediente Caracteristico:</li>
+                                <li>Variantes</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    </tbody>
+                    </table>
+        </div>
+       
+        </div>
+        
+        </div>
+        <div class="container">
+            <h2 class="header__h2">
+                POSTRES ARGENTINOS
+             </h2>	
+             </div>
+<div class="ctncard">
+
+
+    <div class="boxDobleArticle">
+
+
+      <figure class="card-index">
+        <img src="assets/img/postres/postre1_cheescake.jpg" alt="cheescake" class="imgPostre" ;/>
+      </figure>
+
+    </div>
+
+<div class="boxDobleArticle">
+
+<table class="table">
+    <thead>
+        <tr>
+            <td class="text-center htable">CHEESCAKE</td>
+           
+        </tr>
+    </thead>
+
+        <tbody>
+            <tr>
+                <td class="postreImg">Postre #01</td>
+                <td class="text-center"><strong>Cheescake</strong></td>
+                <td class="text-center">Ficha Tecnica</td>
+            </tr>
+            <tr>
+          
+                <td>
+                    <ul>
+                        <li>Origen: </li>
+                        <li>Tecnicas Fundamentales:</li>
+                        <li>Ingrediente Caracteristico:</li>
+                        <li>Variantes</li>
+                    </ul>
+                </td>
+            </tr>
+            </tbody>
+            </table>
+</div>
+<div class="boxDobleArticle">
+<table class="tableSchedule">
+    <thead>
+    <tr>
+        <th class="text-center">Recepta</th>
+        <th class="text-center"> Recepta</th>
+    </tr>
+</thead>
+
+</table>
+</div>
+
+
+
+
+    <div class="boxDobleArticle">
+
+        ''
+        <table class="table">
+            <thead>
+                <tr>
+                    <td class="text-center htable">CHEESCAKE</td>
+                   
+                </tr>
+            </thead>
+        
+                <tbody>
+                    <tr>
+                        <td class="postreImg">Postre #01</td>
+                        <td class="text-center"><strong>Cheescake</strong></td>
+                        <td class="text-center">Ficha Tecnica</td>
+                    </tr>
+                    <tr>
+                  
+                        <td>
+                            <ul>
+                                <li>Origen: </li>
+                                <li>Tecnicas Fundamentales:</li>
+                                <li>Ingrediente Caracteristico:</li>
+                                <li>Variantes</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    </tbody>
+                    </table>
+        </div>
+       
+        </div>
+        
+        </div>
+        <div class="container">
+            <h2 class="header__h2">
+                POSTRES ARGENTINOS
+             </h2>	
+             </div>
+<footer class="container">
+        <a href="#" ><i class="fa fa-facebook"> </i></a>
+        <a href="#" ><i class="fa fa-instagram"> </i></a>
+        <a href="#" ><i class="fa fa-linkedin"> </i></a>
+        <a href="#" ><i class="fa fa-twitter"> </i></a>
+
+    <p class="text-right">hecho gracias a CODO CODO 4.0 a</p>
+</footer>
+</body>
+</html>

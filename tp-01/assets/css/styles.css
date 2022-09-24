@@ -1,0 +1,19 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.p__header{
+    width: 100%;
+    font-weight: 900;
+    text-decoration: underline;
+    text-align: center;
+}
+
+.tbody__justify tr ,
+.tbody__justify tr td,
+.tbody__justify tr td ul,
+.tbody__justify tr td ul li{
+    text-align: justify;
+}
