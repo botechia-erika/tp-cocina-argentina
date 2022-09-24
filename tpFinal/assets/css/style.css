@@ -19,7 +19,7 @@ body{
 	-webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
 	        animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
 }
-.
+
 .shadows {
     position: relative;
     text-transform: uppercase;
@@ -37,7 +37,7 @@ body{
 }
 
 header{
-  margin-top: 4rem;
+  margin: 10 px auto
   padding: 2rem;
   border-radius: 15px ;
   -webkit-border-radius: 15px ;
@@ -52,9 +52,7 @@ header{
   width: 100%;
   object-fit: contain;
   background-color: rgba(255, 255, 255, 0.878);
-  margin-top: 10px;
-  margin: auto ;
-  margin-bottom: 10px;
+  margin: 10px auto;
 }
 .header__h1{
   color: rgb(0, 17, 255);
@@ -226,6 +224,14 @@ margin-bottom: 2rem;
   background-position: center;
 background-repeat: none;
 background-attachment: scroll;
+}
+.container{
+    display: block;
+    width: 90%;
+    padding: 2rem;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
 }
 
 table {
